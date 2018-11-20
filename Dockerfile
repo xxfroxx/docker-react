@@ -1,4 +1,4 @@
-..FROM node:alpine as builder
+FROM node:alpine as builder
 
 WORKDIR  '/app'
 
@@ -11,6 +11,6 @@ CMD ["npm", "run", "start"]
 
 FROM nginx
 
-EXPOSE 80
+EXPOSE 808
 
 COPY --from=builder /app/build /usr/share/nginx/html
